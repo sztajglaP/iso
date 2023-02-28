@@ -27,7 +27,7 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 6rem;
+  font-size: 8rem;
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: #7c7530;
@@ -202,41 +202,4 @@ body {
   .header__title span {
     font-size: 2rem;
   }
-}
-.aboutus__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.aboutus__text-box {
-  margin: 1em 0;
-  font-size: 1.5rem;
-}
-.aboutus__text {
-  margin: 1em 0;
-  text-align: center;
-}
-.aboutus__text:first-child {
-  margin-top: 0;
-}
-.aboutus__button {
-  display: block;
-  margin: 0 auto;
-  padding: 0.3em 1em;
-  font-size: 1.8rem;
-  background: none;
-  border: 1px solid rgb(210, 199, 144);
-  cursor: pointer;
-}
-.aboutus__button:hover {
-  opacity: 80%;
-}
-.aboutus__text-image {
-  margin: 0 auto;
-  width: 90%;
-}
-.aboutus__text-image img {
-  width: 100%;
-  height: 100%;
 }/*# sourceMappingURL=style.css.map */
