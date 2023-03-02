@@ -22,17 +22,35 @@ body {
 }
 
 .section {
-  padding: 2em;
+  padding-top: 2em;
 }
 
+@media (min-width: 992px) {
+  .section {
+    padding-top: 12em;
+  }
+}
 .section-title {
+  margin-bottom: 1em;
   text-align: center;
   font-size: 8rem;
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
+  font-weight: lighter;
   color: #7c7530;
 }
 
+@media (min-width: 992px) {
+  .section-title {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 0;
+    font-size: 12rem;
+  }
+}
 .nav {
   position: fixed;
   padding: 1em 0;
@@ -72,7 +90,7 @@ body {
   margin: 0.1em 0;
   padding: 0.5em 1em;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 400;
   list-style-type: none;
   letter-spacing: 0.2rem;
 }
@@ -204,18 +222,49 @@ body {
   }
 }
 .aboutus__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 7em 0;
+  padding: 1em 2em;
+}
+.aboutus__content:first-child {
+  margin-top: 0;
 }
 .aboutus__subtitle {
   margin-bottom: 0.6em;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  font-weight: 400;
 }
 .aboutus__text {
   text-align: center;
   line-height: 2em;
   font-size: 1.6rem;
+}
+.aboutus__person-box {
+  margin: 2em 0;
+}
+.aboutus__person-name {
+  margin: 0.5em 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.aboutus__person-image {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background-color: grey;
+  background-position: center;
+  background-size: cover;
+}
+.aboutus__person-image--one {
+  background-image: url("../images/man.jpg");
+}
+.aboutus__person-image--two {
+  background-image: url("../images/girl.jpg");
 }
 .aboutus__image-box {
   margin: 4em auto;
@@ -236,7 +285,7 @@ body {
 }
 @media (min-width: 992px) {
   .aboutus__content {
-    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     margin: 5em 0;
     padding: 10em 0;
@@ -252,6 +301,9 @@ body {
   }
   .aboutus__text {
     font-size: 1.7rem;
+  }
+  .aboutus__person-box--left {
+    order: -1;
   }
   .aboutus__image-box {
     position: relative;

@@ -25,15 +25,37 @@ body {
 }
 
 .section {
-    padding: 2em;
+    padding-top: 2em;
+    // background-color: green;
+}
+
+@media(min-width: 992px) {
+    .section {
+        padding-top: 12em;
+    }
 }
 
 .section-title {
+    margin-bottom: 1em;
     text-align: center;
     font-size: 8rem;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
+    font-weight: lighter;
     color: #7c7530;
+}
+
+@media(min-width: 992px) {
+    .section-title {
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width: 1200px) {
+    .section-title {
+        margin-bottom: 0;
+        font-size: 12rem;
+    }
 }
 
 
@@ -85,7 +107,7 @@ body {
         margin: 0.1em 0;
         padding: 0.5em 1em;
         font-size: 2.5rem;
-        font-weight: bold;
+        font-weight: 400;
         list-style-type: none;
         letter-spacing: 0.2rem;
 
@@ -242,7 +264,16 @@ body {
 // section aboutus
 .aboutus {
     &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 7em 0;
+        padding: 1em 2em;
+        // background-color: green;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     &__subtitle {
@@ -250,6 +281,7 @@ body {
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
+        font-weight: 400;
     }
 
     &__text {
@@ -258,6 +290,33 @@ body {
         font-size: 1.6rem;
     }
 
+    &__person-box {
+        margin: 2em 0;
+    }
+
+    &__person-name {
+        margin: 0.5em 0;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    &__person-image {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        background-color: grey;
+        background-position: center;
+        background-size: cover;
+
+        &--one {
+            background-image: url('../images/man.jpg');
+        }
+
+        &--two {
+            background-image: url('../images/girl.jpg');
+        }
+    }
 
     &__image-box {
         margin: 4em auto;
@@ -285,7 +344,7 @@ body {
 @media(min-width: 992px) {
     .aboutus {
         &__content {
-            display: flex;
+            flex-direction: row;
             justify-content: space-evenly;
             margin: 5em 0;
             padding: 10em 0;
@@ -305,6 +364,12 @@ body {
 
         &__text {
             font-size: 1.7rem;
+        }
+
+        &__person-box {
+            &--left {
+                order: -1;
+            }
         }
 
         &__image-box {
